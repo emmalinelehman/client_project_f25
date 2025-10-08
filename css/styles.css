@@ -1,0 +1,86 @@
+
+/*style the skip link to appear when focused and disappear when not focused*/
+.skip a:focus {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    color: #000000;
+    z-index: 1000;
+}
+.skip a {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background-color: #ffffff;
+    color: #000000;
+    z-index: 1000;
+    padding: 8px;
+    text-decoration: none;
+}
+/*style the navigation bar background and links*/
+/* brand colors: #FFCB05, #00274C, #131516 */
+nav {
+    background-color: #00274C;
+    color: #ffffff;
+    width: 100%;
+
+}
+/* style the navigation links to be horizontal and spaced out and aligned to the right side of the navigation bar. Use flexbox to achieve this*/
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+nav li {
+    margin: 0;
+    padding: 10px 8px;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+
+nav a {
+    color: #FFCB05;
+    text-decoration: none;
+}
+nav a:hover, nav a:focus {
+    text-decoration: underline;
+}
+
+/*style the image in the navigation bar to be responsive. Align image to the left of navigation links. Make image small enough to view on mobile. Make vertical alignment middle*/
+nav .brand img {
+    height: 40px;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+/*style the main content area*/
+main {
+    padding: 20px;
+}
+/*style the footer*/
+footer {
+    background-color: #00274C;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+footer a{
+    color:#FFCB05;
+    text-decoration: none;
+
+}
