@@ -18,6 +18,16 @@
     padding: 8px;
     text-decoration: none;
 }
+
+/*set font family and colors/* brand colors: #FFCB05, #00274C, #131516 */
+body {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #131516;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /*style the navigation bar background and links*/
 /* brand colors: #FFCB05, #00274C, #131516 */
 nav {
@@ -26,28 +36,23 @@ nav {
     width: 100%;
 
 }
-/* style the navigation links to be horizontal and spaced out and aligned to the right side of the navigation bar. Use flexbox to achieve this*/
+/* style the navigation links to be horizontal and spaced out and aligned to the center of the navigation bar. The text should scale appropriately on different screen sizes.*/
 nav ul {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
     display: flex;
     flex-direction: row;
-    gap: 12px;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
 }
 
-
 nav li {
-    margin: 0;
     padding: 10px 8px;
     font-size: 14px;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
-}
 
+}
 
 nav a {
     color: #FFCB05;
@@ -57,18 +62,44 @@ nav a:hover, nav a:focus {
     text-decoration: underline;
 }
 
-/*style the image in the navigation bar to be responsive. Align image to the left of navigation links. Make image small enough to view on mobile. Make vertical alignment middle*/
-nav .brand img {
-    height: 40px;
+/* style the logo to be centered and scale appropriately. The logo should be centered in the navigation bar, and the navigation links will sit underneath it, centered as well. The logo should scale appropriately on different screen sizes.*/
+
+.brand img {
     width: auto;
-    display: flex;
-    flex-direction: row;
+    display: block;
+    margin: 0 auto;
+    height: 100px;
 }
 
-/*style the main content area*/
-main {
-    padding: 20px;
+/*style h1 to be centered and have a larger font size, scaled appropriately on different screen sizes using flexbox*/
+.header-content h1 {
+    font-size: 2rem;
+    margin: 0;
+    padding: 0;
+    text-align: center;
 }
+
+/*style the index page image to be centered and scale appropriately. The image should be centered on the page, and the text will sit underneath it, centered as well. The image should scale appropriately on different screen sizes.*/
+
+.journey img{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    height: auto;
+}
+.intro {
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+
 /*style the footer*/
 footer {
     background-color: #00274C;
