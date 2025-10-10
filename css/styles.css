@@ -20,21 +20,38 @@
 }
 
 /*set font family and colors/* brand colors: #FFCB05, #00274C, #131516 */
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html { font-size: 100%; }
+
 body {
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #131516;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    line-height: 1.5;
+    max-width: 100%;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #131516;
+}
+
+/* Make all media fluid */
+img, video, iframe {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 /*style the navigation bar background and links*/
 /* brand colors: #FFCB05, #00274C, #131516 */
+/*the nav bar should always be at the top of the page and span the full width of the page responsively*/
 nav {
     background-color: #00274C;
-    color: #ffffff;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
     width: 100%;
-
 }
 /* style the navigation links to be horizontal and spaced out and aligned to the center of the navigation bar. The text should scale appropriately on different screen sizes.*/
 nav ul {
@@ -57,6 +74,9 @@ nav li {
 nav a {
     color: #FFCB05;
     text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    padding: 8px 12px;
 }
 nav a:hover, nav a:focus {
     text-decoration: underline;
@@ -72,11 +92,42 @@ nav a:hover, nav a:focus {
 }
 
 /*style h1 to be centered and have a larger font size, scaled appropriately on different screen sizes using flexbox*/
+.header-content{
+    background-color: #FFCB05;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .header-content h1 {
-    font-size: 2rem;
-    margin: 0;
-    padding: 0;
+    font-size: 1.5rem;
+    margin: 10px 0;
+    padding: 10px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-content p {
+    font-size: 1.1rem;
+    margin: 10px 0;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/*style the class video-container to be centered and scale appropriately. The video should be centered on the page, and the text will sit underneath it, centered as well. The video should scale appropriately on different screen sizes.*/
+.video-container {
+    position: relative;
+    padding-top: 25px;
+    max-width: 100%;
 }
 
 /*style the index page image to be centered and scale appropriately. The image should be centered on the page, and the text will sit underneath it, centered as well. The image should scale appropriately on different screen sizes.*/
@@ -115,3 +166,70 @@ footer a{
     text-decoration: none;
 
 }
+/*style the benefits_card_grid section to be a grid with 2 columns and hold benefits_card_grid items in both columns, alternating. Grid takes up whole screen width and text scales appropriately on different screen sizes*/
+
+.benefits {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #00274C;
+    color: #ffffff;
+    margin-top: 20px;
+    border: #FFCB05 2px solid;
+    border-radius: 8px;
+}
+
+.benefits h2 {
+    grid-column: span 2;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+
+.benefits_card_grid li {
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 1rem;
+    line-height: 1.4;
+    text-align: center;
+    list-style: none;
+}
+
+#benefit-1 {
+    background-color: #FFCB05;
+    color: #00274C;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+#benefit-2 {
+    background-color: #00274C;
+    color: #FFFFFF;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+#benefit-3 {
+    background-color: #FFCB05;
+    color: #00274C;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+#benefit-4 {
+    background-color: #00274C;
+    color: #FFFFFF;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+#benefit-5 {
+    background-color: #FFCB05;
+    color: #00274C;
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+}
+#benefit-6 {
+    background-color: #00274C;
+    color: #FFFFFF;
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+}
+
