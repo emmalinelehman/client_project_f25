@@ -1,235 +1,410 @@
 
-/*style the skip link to appear when focused and disappear when not focused*/
-.skip a:focus {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: #ffffff;
-    color: #000000;
-    z-index: 1000;
+/*
+Simple, easy-to-edit stylesheet for the UMSI Career Dev site
+*/
+
+
+/* Basic box-sizing and readable defaults I like to keep */
+*, *::before, *::after {
+    box-sizing: border-box;
 }
-.skip a {
-    position: absolute;
-    top: -40px;
-    left: 0;
-    background-color: #ffffff;
-    color: #000000;
-    z-index: 1000;
-    padding: 8px;
-    text-decoration: none;
+html {
+    font-size: 16px;
 }
 
-/*set font family and colors/* brand colors: #FFCB05, #00274C, #131516 */
 
-*,
-*::before,
-*::after { box-sizing: border-box; }
+/* Make nav stack vertically so the logo sits centered above the links */
+nav {
+    background: #00274C;
+    padding: 12px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-html { font-size: 100%; }
+nav .brand {
+    display: block;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+nav .brand img {
+    height: 72px; /* slightly larger so it looks like the original */
+    width: auto;
+}
 
 body {
     margin: 0;
-    padding: 0;
-    line-height: 1.5;
-    max-width: 100%;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #131516;
 }
-
-/* Make all media fluid */
-img, video, iframe {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
-/*style the navigation bar background and links*/
-/* brand colors: #FFCB05, #00274C, #131516 */
-/*the nav bar should always be at the top of the page and span the full width of the page responsively*/
-nav {
-    background-color: #00274C;
-    padding: 10px 0;
-    position: sticky;
-    top: 0;
-    width: 100%;
-}
-/* style the navigation links to be horizontal and spaced out and aligned to the center of the navigation bar. The text should scale appropriately on different screen sizes.*/
-nav ul {
-    list-style-type: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-nav li {
-    padding: 10px 8px;
-    font-size: 14px;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-
-}
-
-nav a {
-    color: #FFCB05;
-    text-decoration: none;
-    font-size: 1rem;
-    transition: color 0.3s ease;
-    padding: 8px 12px;
-}
-nav a:hover, nav a:focus {
-    text-decoration: underline;
-}
-
-/* style the logo to be centered and scale appropriately. The logo should be centered in the navigation bar, and the navigation links will sit underneath it, centered as well. The logo should scale appropriately on different screen sizes.*/
-
-.brand img {
-    width: auto;
-    display: block;
-    margin: 0 auto;
-    height: 100px;
-}
-
-/*style h1 to be centered and have a larger font size, scaled appropriately on different screen sizes using flexbox*/
-.header-content{
-    background-color: #FFCB05;
-    padding: 20px;
+.benefits-grid {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    gap: 10px;
 }
+.benefit-card { background: #FFCB05; color: #00274C; padding: 10px; border-radius: 6px; }
 
-.header-content h1 {
-    font-size: 1.5rem;
-    margin: 10px 0;
-    padding: 10px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.header-content p {
-    font-size: 1.1rem;
-    margin: 10px 0;
-    padding: 10px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-/*style the class video-container to be centered and scale appropriately. The video should be centered on the page, and the text will sit underneath it, centered as well. The video should scale appropriately on different screen sizes.*/
-.video-container {
-    position: relative;
-    padding-top: 25px;
-    max-width: 100%;
-}
-
-/*style the index page image to be centered and scale appropriately. The image should be centered on the page, and the text will sit underneath it, centered as well. The image should scale appropriately on different screen sizes.*/
-
-.journey img{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    max-width: 100%;
-    height: auto;
-}
-.intro {
-    text-align: center;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    
-}
-
-
-/*style the footer*/
-footer {
-    background-color: #00274C;
-    color: #ffffff;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-footer a{
-    color:#FFCB05;
-    text-decoration: none;
-
-}
-/*style the benefits_card_grid section to be a grid with 2 columns and hold benefits_card_grid items in both columns, alternating. Grid takes up whole screen width and text scales appropriately on different screen sizes*/
-
+/* Restore the blue/yellow styled benefits section similar to the original design.
+    Keep it simple: single-column on mobile, alternating backgrounds for visual
+    distinction. If we later want two columns we can add a rule, but for now
+    this keeps editing easy. */
 .benefits {
     width: 100%;
-    padding: 20px;
+    padding: 14px;
     box-sizing: border-box;
-    background-color: #00274C;
+    background-color: #00274C; /* dark blue */
     color: #ffffff;
-    margin-top: 20px;
-    border: #FFCB05 2px solid;
+    margin-top: 12px;
+    border: 3px solid #FFCB05; /* yellow border */
     border-radius: 8px;
 }
+.benefits h2 { color: #FFCB05; margin-top: 0; }
 
-.benefits h2 {
-    grid-column: span 2;
-    text-align: center;
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+
+.benefits_card_grid {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
-
-
 .benefits_card_grid li {
-    padding: 15px;
-    border-radius: 5px;
-    font-size: 1rem;
-    line-height: 1.4;
-    text-align: center;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    line-height: 1.3;
     list-style: none;
 }
 
-#benefit-1 {
-    background-color: #FFCB05;
+
+/* alternate colors: odd -> yellow with dark text, even -> blue with white text */
+.benefits_card_grid li:nth-child(odd) {
+    background: #FFCB05; 
+    color: #00274C; 
+}
+.benefits_card_grid li:nth-child(even) { 
+    background: #00274C; 
+    color: #FFFFFF; 
+    border: 1px solid rgba(255,203,5,0.08); 
+}
+
+
+body {
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    color: #131516; 
+    line-height: 1.4;
+    background: #ffffff;
+}
+
+/* Keep images and iframes from overflowing */
+img, iframe {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* hide the skip link until it's focused so keyboard users can see it */
+.skip a {
+    position: absolute;
+    left: -9999px;
+    top: auto;
+}
+
+
+.skip a:focus {
+    position: static;
+    display: block;
+    background: #ffffff;
+    padding: 8px;
+}
+
+/* = Header / nav */
+
+nav {
+    background: #00274C;
+    padding: 12px 16px;
+}
+
+
+nav .brand {
+    display: block;
+    text-align: center;
+    margin-bottom: 8px;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+nav .brand img {
+    height: 100px;
+    width: auto;
+}
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+}
+nav a {
+    color: #FFCB05;
+    text-decoration: none;
+    padding: 6px 8px;
+    display: inline-block;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* header content block (title + intro) */
+header .header-content {
+    background: #FFCB05;
+    padding: 14px 12px;
+    text-align: center;
+}
+header h1 {
+    margin: 0 0 6px 0;
+    font-size: 1.25rem;
+}
+header p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.4;
     color: #00274C;
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
+    font-style: italic;
 }
-#benefit-2 {
-    background-color: #00274C;
-    color: #FFFFFF;
-    grid-column: 2 / 3;
-    grid-row: 1 / 2;
+
+
+/* Main content container — keep it narrow for readability and centered */
+main {
+    padding: 16px;
+    background-color: #f9f9f9;
+    max-width: 820px; /* easy to change if you want wider/narrower pages */
+    margin: 0 auto; /* center on larger screens */
+    box-sizing: border-box;
 }
-#benefit-3 {
-    background-color: #FFCB05;
+
+/* Simple card-like blocks for page sections — quick to tweak */
+.block {
+    margin-bottom: 18px;
+    background: #ffffff;            /* white cards on a soft page background */
+    padding: 12px;                  /* internal spacing so content breathes */
+    border-radius: 8px;             /* subtle rounded corners */
+    border: 1px solid #e6e6e6;      /* light border so blocks are distinct */
+}
+
+/* Headings and paragraph rhythm — tweak these for visual hierarchy */
+h1, h2, h3 {
     color: #00274C;
-    grid-column: 1 / 2;
-    grid-row: 2 / 3;
+    margin-top: 0;
 }
-#benefit-4 {
-    background-color: #00274C;
-    color: #FFFFFF;
-    grid-column: 2 / 3;
-    grid-row: 2 / 3;
+
+
+h1 { 
+    font-size: 1.6rem;
+    margin-bottom: 6px;
+    ;
 }
-#benefit-5 {
-    background-color: #FFCB05;
+
+h2 { 
+    font-size: 1.25rem; 
+    margin: 8px 0;
+
+}
+
+h3 { font-size: 1.05rem; margin: 6px 0; }
+
+
+.block p, .block div {
+    margin: 8px 0;
     color: #00274C;
-    grid-column: 1 / 2;
-    grid-row: 3 / 4;
+    font-size: 1rem;
 }
-#benefit-6 {
-    background-color: #00274C;
-    color: #FFFFFF;
-    grid-column: 2 / 3;
-    grid-row: 3 / 4;
+.block h2{
+    margin: 8px 0;
+    color: #00274C;
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* style the resource types section on career exploration page */
+.resource-types {
+    margin-top: 12px;
+    padding: 10px;
+    background: #FFCB05;
+    color: #00274C;
+    border: 2px solid #00274C;
+    border-radius: 6px;
+    }
+
+.resource-types ul{
+    list-style: none;
+    padding-left: 0;
+    margin: 12px 10px;
+    text-align: center;
+    padding: 10px;
+}
+/* Links inside content (different from nav) */
+main a { color: #00274C; text-decoration: underline; }
+main a:hover { color: #001f3b; text-decoration: none; }
+main a:focus { outline: 3px solid #FFCB05; outline-offset: 3px; }
+
+/* Lists inside content */
+
+.benefits-grid { display: flex; flex-direction: column; gap: 10px; }
+
+.benefit-card {
+    background: #FFCB05;
+    color: #00274C;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+
+li {
+    margin-bottom: 8px;
+}
+
+ul{
+    padding: 2px;
+}
+
+
+
+/* I had copilot help me with the iframe-- it was so confusing.
+I want the video to keep a good 16:9 ratio on any device. This pattern
+gives a simple responsive container so I don't need width/height attributes
+on the iframe itself. */
+
+.video-container {
+    position: relative;
+    width: 100%;
+}
+.video-container::before {
+/* 16:9 ratio -> 9/16 = 56.25% I guess? idk*/
+    content: "";
+    display: block;
+    padding-top: 56.25%;
+}
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+/*style the popular resources section on career exp page*/
+.popular-resources {
+    background: #FFCB05;
+    padding: 14px 12px;
+    border-radius: 8px;
+    margin-top: 12px;
+    text-align: center;
+    list-style: none;
+    border: #00274C 3px solid;
+}
+.popular-resources a {
+    color: #00274C;
+    text-decoration: underline;
+    font-weight: bold;
+    list-style: none;
+
+}
+.popular-resources li {
+    margin: 8px 0;
+    font-size: 1rem;
+    list-style: none;
+}
+.popular-resources h2 {
+    margin-top: 0;
+    font-size: 1.2rem;
+    color: #00274C;
+}
+
+/*style the cdo_4_resources link section on index*/
+.cdo_4_resources {
+    background: #FFCB05;
+    padding: 14px 12px;
+    border-radius: 8px;
+    margin-top: 12px;
+    text-align: center;
+    list-style: none;
+    border: #00274C 3px solid;
+}
+
+.cdo_4_resources a {
+    color: #00274C;
+    text-decoration: underline;
+    font-weight: bold;
+    list-style: none;
+}
+.cdo_4_resources li{
+    list-style: none;
+}
+
+.cdo_4_resources img{
+    border: #FFFFFF 5px solid;
+}
+/*style the networking_list section on the networking page*/
+
+.networking_list {
+    list-style: none;
+    padding-left: 0;
+    margin: 12px 12px;
+    text-align: center;
+    padding: 10px;
+    
+}
+.networking_list li {
+    margin-bottom: 8px;
+    font-size: 1rem;
+    list-style: none;
+    text-align: center;
+    padding: 10px 10px;
+    border: #00274C 2px solid;
+    border-radius: 10px;
+    background-color: #FFCB05;
+    
+}
+
+/* image utilities- use these instead of inline width/height */
+.illustration {
+    width: 100%;
+    height: auto;
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+
+/*  footer styles */
+footer {
+    background: #00274C;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 12px;
+}
+
+footer a {
+    color: #FFCB05;
+    text-decoration: none;
+}
+
+
+/* I am not quite sure what to do with these but they seem to fix stuff*/
+/* I'm leaving these simple so I can use them while editing pages */
+.row {
+    display: flex;
+    gap: 12px;
+}
+.col {
+    flex: 1;
+}
+
+.col {
+    flex: 1;
 }
 
