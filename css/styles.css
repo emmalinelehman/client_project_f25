@@ -323,6 +323,65 @@ on the iframe itself. */
     color: #00274C;
 }
 
+.block ul{
+    padding: 2px;
+
+}
+.block li{
+    list-style: none;
+}
+/*style the faq */
+.block h2 {
+    margin: 1rem 0 .5rem;
+    color: #00274C;            /* navy */
+}
+
+.faq-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.faq-list li {
+    background: #f5f7fa;
+    border-left: 4px solid #FFCB05;  /* maize accent */
+
+    border-radius: 6px;
+    padding: .75rem 1rem;
+    margin: .75rem 0;
+}
+
+.faq-list .q {
+    font-weight: 700;
+    color: #00274C;            /* navy for questions */
+    margin-bottom: .25rem;
+}
+
+.faq-list .a {
+    margin: 0;
+  color: #131516;            /* body text */
+}
+
+
+.faq-list li:hover {
+    background: #eaf0f8;
+}
+
+
+/* two-column layout for wider screens */
+.faq-list.twoup {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;                 
+}
+
+.faq-list.twoup > li {
+    flex: 1 1 48%;             /* ~two per row; stacks automatically when narrow */
+    max-width: 48%;
+    margin: 0;
+}
+
+
 /*style the cdo_4_resources link section on index*/
 .cdo_4_resources {
     background: #FFCB05;
