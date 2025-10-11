@@ -219,7 +219,11 @@ h3 { font-size: 1.05rem; margin: 6px 0; }
     margin: 8px 0;
     color: #00274C;
     font-size: 1rem;
+    line-height: 1.4;
+    text-align: center;
 }
+
+
 .block h2{
     margin: 8px 0;
     color: #00274C;
@@ -333,7 +337,7 @@ on the iframe itself. */
 /*style the faq */
 .block h2 {
     margin: 1rem 0 .5rem;
-    color: #00274C;            /* navy */
+    color: #00274C;
 }
 
 .faq-list {
@@ -345,7 +349,6 @@ on the iframe itself. */
 .faq-list li {
     background: #f5f7fa;
     border-left: 4px solid #FFCB05;  /* maize accent */
-
     border-radius: 6px;
     padding: .75rem 1rem;
     margin: .75rem 0;
@@ -372,7 +375,7 @@ on the iframe itself. */
 .faq-list.twoup {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;                 
+    gap: 1rem;
 }
 
 .faq-list.twoup > li {
