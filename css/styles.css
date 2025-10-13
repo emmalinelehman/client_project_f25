@@ -309,7 +309,7 @@ on the iframe itself. */
 }
 
 /*  Grid utilities (mobile-first, no media queries) */
-/* a simple responsive grid: auto-fit columns with a comfortable min width */
+/* a simple responsive grid: auto-fit columns with a comfortable min width w3ithout using the max width rule which isnt allowed */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -525,7 +525,7 @@ footer {
 
 footer a {
     color: #FFCB05;
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 
