@@ -336,17 +336,22 @@ on the iframe itself. */
     height: auto;
     display: block;
     margin: 0 auto 8px;
+    
 }
 
 .card h3 {
     margin: 6px 0;
     font-size: 1rem;
     color: #00274C;
+    text-align: center;
+    font-weight: bold;
 }
 .card p {
     margin: 0; 
     font-size: 0.95rem;
     color: #333;
+    line-height: 1.4;
+    text-align: center;
 }
 
 /* specific grid for the index quick links --rgba property suggested by copilot */
