@@ -53,7 +53,7 @@
     </ol>
   </div>
 
-  <div class="block">
+  <div class="block" id="resume-resources">
     <h2>Resume Resources</h2>
     <ul>
       <li>
@@ -120,8 +120,10 @@
 
     </main>
     <footer>
-        <p>University of Michigan School of Information | <a href="https://umich.instructure.com/courses/137916">UMSI Career Development Office </a></p>
+        <p>University of Michigan School of Information | <a href="https://umich.instructure.com/courses/137916">UMSI Career Development Office </a>  &copy; Copyrights <span id="year"></span></p>
+        <script>
+            document.getElementById("year").textContent = new Date().getFullYear();
+        </script>
     </footer>
-
 </body>
 </html>

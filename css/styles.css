@@ -1,13 +1,15 @@
-
 /*
 Simple, easy-to-edit stylesheet for the UMSI Career Dev site
 */
 
 
 /* Basic box-sizing and readable defaults I like to keep */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
+
 html {
     font-size: 16px;
 }
@@ -29,19 +31,27 @@ nav .brand {
 }
 
 nav .brand img {
-    height: 72px; /* slightly larger so it looks like the original */
+    height: 72px;
+    /* slightly larger so it looks like the original */
     width: auto;
 }
 
 body {
     margin: 0;
 }
+
 .benefits-grid {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
-.benefit-card { background: #FFCB05; color: #00274C; padding: 10px; border-radius: 6px; }
+
+.benefit-card {
+    background: #FFCB05;
+    color: #00274C;
+    padding: 10px;
+    border-radius: 6px;
+}
 
 /* Restore the blue/yellow styled benefits section similar to the original design.
     Keep it simple: single-column on mobile, alternating backgrounds for visual
@@ -51,13 +61,19 @@ body {
     width: 100%;
     padding: 14px;
     box-sizing: border-box;
-    background-color: #00274C; /* dark blue */
+    background-color: #00274C;
+    /* dark blue */
     color: #ffffff;
     margin-top: 12px;
-    border: 3px solid #FFCB05; /* yellow border */
+    border: 3px solid #FFCB05;
+    /* yellow border */
     border-radius: 8px;
 }
-.benefits h2 { color: #FFCB05; margin-top: 0; }
+
+.benefits h2 {
+    color: #FFCB05;
+    margin-top: 0;
+}
 
 
 .benefits_card_grid {
@@ -68,6 +84,7 @@ body {
     flex-direction: column;
     gap: 10px;
 }
+
 .benefits_card_grid li {
     padding: 12px;
     border-radius: 6px;
@@ -79,25 +96,27 @@ body {
 
 /* alternate colors: odd -> yellow with dark text, even -> blue with white text */
 .benefits_card_grid li:nth-child(odd) {
-    background: #FFCB05; 
-    color: #00274C; 
+    background: #FFCB05;
+    color: #00274C;
 }
-.benefits_card_grid li:nth-child(even) { 
-    background: #00274C; 
-    color: #FFFFFF; 
-    border: 1px solid rgba(255,203,5,0.08); 
+
+.benefits_card_grid li:nth-child(even) {
+    background: #00274C;
+    color: #FFFFFF;
+    border: 1px solid rgba(255, 203, 5, 0.08);
 }
 
 
 body {
     font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-    color: #131516; 
+    color: #131516;
     line-height: 1.4;
     background: #ffffff;
 }
 
 /* Keep images and iframes from overflowing */
-img, iframe {
+img,
+iframe {
     max-width: 100%;
     height: auto;
     display: block;
@@ -139,6 +158,7 @@ nav .brand img {
     height: 100px;
     width: auto;
 }
+
 nav ul {
     list-style: none;
     margin: 0;
@@ -147,6 +167,7 @@ nav ul {
     gap: 8px;
     justify-content: center;
 }
+
 nav a {
     color: #FFCB05;
     text-decoration: none;
@@ -162,10 +183,12 @@ header .header-content {
     padding: 14px 12px;
     text-align: center;
 }
+
 header h1 {
     margin: 0 0 6px 0;
     font-size: 1.25rem;
 }
+
 header p {
     margin: 0;
     font-size: 1rem;
@@ -179,43 +202,55 @@ header p {
 main {
     padding: 16px;
     background-color: #f9f9f9;
-    max-width: 820px; /* easy to change if you want wider/narrower pages */
-    margin: 0 auto; /* center on larger screens */
+    max-width: 820px;
+    /* easy to change if you want wider/narrower pages */
+    margin: 0 auto;
+    /* center on larger screens */
     box-sizing: border-box;
 }
 
 /* Simple card-like blocks for page sections — quick to tweak */
 .block {
     margin-bottom: 18px;
-    background: #ffffff;            /* white cards on a soft page background */
-    padding: 12px;                  /* internal spacing so content breathes */
-    border-radius: 8px;             /* subtle rounded corners */
-    border: 1px solid #e6e6e6;      /* light border so blocks are distinct */
+    background: #ffffff;
+    /* white cards on a soft page background */
+    padding: 12px;
+    /* internal spacing so content breathes */
+    border-radius: 8px;
+    /* subtle rounded corners */
+    border: 1px solid #e6e6e6;
+    /* light border so blocks are distinct */
 }
 
 /* Headings and paragraph rhythm — tweak these for visual hierarchy */
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     color: #00274C;
     margin-top: 0;
 }
 
 
-h1 { 
+h1 {
     font-size: 1.6rem;
     margin-bottom: 6px;
     ;
 }
 
-h2 { 
-    font-size: 1.25rem; 
+h2 {
+    font-size: 1.25rem;
     margin: 8px 0;
 
 }
 
-h3 { font-size: 1.05rem; margin: 6px 0; }
+h3 {
+    font-size: 1.05rem;
+    margin: 6px 0;
+}
 
 
-.block p, .block div {
+.block p,
+.block div {
     margin: 8px 0;
     color: #00274C;
     font-size: 1rem;
@@ -224,7 +259,7 @@ h3 { font-size: 1.05rem; margin: 6px 0; }
 }
 
 
-.block h2{
+.block h2 {
     margin: 8px 0;
     color: #00274C;
     font-size: 1.25rem;
@@ -232,12 +267,17 @@ h3 { font-size: 1.05rem; margin: 6px 0; }
     text-align: center;
 }
 
-.block img{
+.block img {
     border: #FFFFFF 5px solid;
     border-radius: 8px;
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+.block a {
+    text-align: center;
+
 }
 
 /* style the resource types section on career exploration page */
@@ -248,23 +288,39 @@ h3 { font-size: 1.05rem; margin: 6px 0; }
     color: #00274C;
     border: 2px solid #00274C;
     border-radius: 6px;
-    }
+}
 
-.resource-types ul{
+.resource-types ul {
     list-style: none;
     padding-left: 0;
     margin: 12px 10px;
     text-align: center;
     padding: 10px;
 }
+
 /* Links inside content (different from nav) */
-main a { color: #00274C; text-decoration: underline; }
-main a:hover { color: #001f3b; text-decoration: none; }
-main a:focus { outline: 3px solid #FFCB05; outline-offset: 3px; }
+main a {
+    color: #00274C;
+    text-decoration: underline;
+}
+
+main a:hover {
+    color: #001f3b;
+    text-decoration: none;
+}
+
+main a:focus {
+    outline: 3px solid #FFCB05;
+    outline-offset: 3px;
+}
 
 /* Lists inside content */
 
-.benefits-grid { display: flex; flex-direction: column; gap: 10px; }
+.benefits-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
 
 .benefit-card {
     background: #FFCB05;
@@ -278,11 +334,18 @@ li {
     margin-bottom: 8px;
 }
 
-ul{
+ul {
     padding: 2px;
 }
 
-
+/* Style the Resume Resources section for better readability on mobile. */
+#resume-resources ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 12px 10px;
+    text-align: center;
+    padding: 10px;
+}
 
 /* I had copilot help me with the iframe-- it was so confusing.
 I want the video to keep a good 16:9 ratio on any device. This pattern
@@ -293,12 +356,14 @@ on the iframe itself. */
     position: relative;
     width: 100%;
 }
+
 .video-container::before {
-/* 16:9 ratio -> 9/16 = 56.25% I guess? idk*/
+    /* 16:9 ratio -> 9/16 = 56.25% I guess? idk*/
     content: "";
     display: block;
     padding-top: 56.25%;
 }
+
 .video-container iframe {
     position: absolute;
     top: 0;
@@ -321,14 +386,16 @@ on the iframe itself. */
     background: #ffffff;
     border-radius: 10px;
     padding: 12px;
-    box-shadow: 0 2px 6px rgba(2,39,76,0.06);
+    box-shadow: 0 2px 6px rgba(2, 39, 76, 0.06);
     /*made a cool hover effect with copilot*/
     transition: transform 120ms ease, box-shadow 120ms ease;
     text-align: center;
 }
-.card:hover, .card:focus {
+
+.card:hover,
+.card:focus {
     transform: translateY(-6px);
-    box-shadow: 0 10px 24px rgba(2,39,76,0.12);
+    box-shadow: 0 10px 24px rgba(2, 39, 76, 0.12);
 }
 
 /* card image treatment */
@@ -337,6 +404,7 @@ on the iframe itself. */
     display: block;
     margin: 0 auto 8px;
     
+
 }
 
 .card h3 {
@@ -346,8 +414,9 @@ on the iframe itself. */
     text-align: center;
     font-weight: bold;
 }
+
 .card p {
-    margin: 0; 
+    margin: 0;
     font-size: 0.95rem;
     color: #333;
     line-height: 1.4;
@@ -355,19 +424,41 @@ on the iframe itself. */
 }
 
 /* specific grid for the index quick links --rgba property suggested by copilot */
-.cdo-grid .card { background: #FFFBF0; border: 1px solid rgba(0,39,76,0.06); }
+.cdo-grid .card {
+    background: #FFFBF0;
+    border: 1px solid rgba(0, 39, 76, 0.06);
+}
 
 /* restyle benefit-card as a card variant */
-.benefit-card { padding: 14px; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.04); }
-.benefit-card h3 { margin-top: 0; }
-.benefit-card p { margin: 6px 0 0; }
+.benefit-card {
+    padding: 14px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.benefit-card h3 {
+    margin-top: 0;
+}
+
+.benefit-card p {
+    margin: 6px 0 0;
+}
 
 /* hover state for benefit cards */
-.benefit-card:hover { transform: translateY(-4px); }
+.benefit-card:hover {
+    transform: translateY(-4px);
+}
 
 /* = Navigation active */
-nav a:hover, nav a:focus { transform: translateY(-1px); }
-nav a:focus { outline: 3px solid #FFCB05; outline-offset: 3px; }
+nav a:hover,
+nav a:focus {
+    transform: translateY(-1px);
+}
+
+nav a:focus {
+    outline: 3px solid #FFCB05;
+    outline-offset: 3px;
+}
 
 /* active page indicator - add class="active" to the current page link in HTML */
 nav a.active {
@@ -387,6 +478,7 @@ nav a.active {
     list-style: none;
     border: #00274C 3px solid;
 }
+
 .popular-resources a {
     color: #00274C;
     text-decoration: underline;
@@ -394,24 +486,28 @@ nav a.active {
     list-style: none;
 
 }
+
 .popular-resources li {
     margin: 8px 0;
     font-size: 1rem;
     list-style: none;
 }
+
 .popular-resources h2 {
     margin-top: 0;
     font-size: 1.2rem;
     color: #00274C;
 }
 
-.block ul{
+.block ul {
     padding: 2px;
 
 }
-.block li{
+
+.block li {
     list-style: none;
 }
+
 /*style the faq */
 .block h2 {
     margin: 1rem 0 .5rem;
@@ -426,7 +522,8 @@ nav a.active {
 
 .faq-list li {
     background: #f5f7fa;
-    border-left: 4px solid #FFCB05;  /* maize accent */
+    border-left: 4px solid #FFCB05;
+    /* maize accent */
     border-radius: 6px;
     padding: .75rem 1rem;
     margin: .75rem 0;
@@ -434,13 +531,15 @@ nav a.active {
 
 .faq-list .q {
     font-weight: 700;
-    color: #00274C;            /* navy for questions */
+    color: #00274C;
+    /* navy for questions */
     margin-bottom: .25rem;
 }
 
 .faq-list .a {
     margin: 0;
-  color: #131516;            /* body text */
+    color: #131516;
+    /* body text */
 }
 
 
@@ -456,8 +555,9 @@ nav a.active {
     gap: 1rem;
 }
 
-.faq-list.twoup > li {
-    flex: 1 1 48%;             /* ~two per row; stacks automatically when narrow */
+.faq-list.twoup>li {
+    flex: 1 1 48%;
+    /* ~two per row; stacks automatically when narrow */
     max-width: 48%;
     margin: 0;
 }
@@ -480,13 +580,15 @@ nav a.active {
     font-weight: bold;
     list-style: none;
 }
-.cdo_4_resources li{
+
+.cdo_4_resources li {
     list-style: none;
 }
 
-.cdo_4_resources img{
+.cdo_4_resources img {
     border: #FFFFFF 5px solid;
 }
+
 /*style the networking_list section on the networking page*/
 
 .networking_list {
@@ -495,8 +597,9 @@ nav a.active {
     margin: 12px 12px;
     text-align: center;
     padding: 10px;
-    
+
 }
+
 .networking_list li {
     margin-bottom: 8px;
     font-size: 1rem;
@@ -506,7 +609,7 @@ nav a.active {
     border: #00274C 2px solid;
     border-radius: 10px;
     background-color: #FFCB05;
-    
+
 }
 
 /* image utilities- use these instead of inline width/height */
@@ -540,11 +643,360 @@ footer a {
     display: flex;
     gap: 12px;
 }
-.col {
-    flex: 1;
-}
 
 .col {
     flex: 1;
 }
 
+.col {
+    flex: 1;
+}
+
+/* 404.html page styles */
+
+body.error-page {
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #00274C;
+}
+main.error-page {
+    background-color: #00274C;
+}
+
+.error-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.error-logo {
+    height: 120px;
+    width: auto;
+    margin-bottom: 20px;
+}
+
+.error-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 16px;
+    color: #FFCB05;
+    
+}
+
+.error-container p {
+    font-size: 1.2rem;
+    margin-bottom: 16px;
+    color: #FFFFFF;
+}
+
+.error-container a {
+    font-size: 1.2rem;
+    color: #FFCB05;
+    text-decoration: underline;
+}
+
+.error-container a:hover {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.error-graphic {
+    width: 80%;
+    height: auto;
+    margin-top: 20px;
+}
+
+/* css styles taken from https://codepen.io/MarkBoots/pen/ZEXaEBX */
+.olcards {
+    list-style: none;
+    counter-reset: cardCount;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    --cardsGap: 1rem;
+    gap: var(--cardsGap);
+    padding-bottom: var(--cardsGap);
+}
+
+.olcards li {
+    counter-increment: cardCount;
+    display: flex;
+    color: white;
+    --labelOffset: 1rem;
+    --arrowClipSize: 1.5rem;
+    margin-top: var(--labelOffset);
+}
+
+.olcards li::before {
+    content: counter(cardCount, decimal-leading-zero);
+    background: white;
+    color: var(--cardColor);
+    font-size: 2em;
+    font-weight: 700;
+    transform: translateY(calc(-1 * var(--labelOffset)));
+    margin-right: calc(-1 * var(--labelOffset));
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 0.5em;
+}
+
+.olcards li .content {
+    background-color: var(--cardColor);
+    --inlinePadding: 1em;
+    --boxPadding: 0.5em;
+    display: grid;
+    padding: var(--boxPadding) calc(var(--inlinePadding) + var(--arrowClipSize)) var(--boxPadding) calc(var(--inlinePadding) + var(--labelOffset));
+    grid-template-areas:
+        "icon title"
+        "icon text";
+    gap: 0.25em 1em;
+    clip-path: polygon(0 0,
+            calc(100% - var(--arrowClipSize)) 0,
+            100% 50%,
+            calc(100% - var(--arrowClipSize)) 100%,
+            calc(100% - var(--arrowClipSize)) calc(100% + var(--cardsGap)),
+            0 calc(100% + var(--cardsGap)));
+    position: relative;
+}
+
+.olcards li .content::before {
+    content: "";
+    position: absolute;
+    width: var(--labelOffset);
+    height: var(--labelOffset);
+    background: var(--cardColor);
+    left: 0;
+    bottom: 0;
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+    filter: brightness(0.75);
+}
+
+.olcards li .content::after {
+    content: "";
+    position: absolute;
+    height: var(--cardsGap);
+    width: var(--cardsGap);
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.25), transparent 50%);
+    left: 0;
+    top: 100%;
+}
+
+.olcards li .icon {
+    grid-area: icon;
+    align-self: center;
+    font-size: 2em;
+}
+
+.olcards li .content .title {
+    grid-area: title;
+    font-size: 1.25em;
+    /* font-weight: 700; */
+}
+
+.olcards li .content .text {
+    grid-area: text;
+
+}
+
+.olcards a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+#building_network .block {
+    margin-bottom: 18px;
+    background: #ffffff;
+    /* white cards on a soft page background */
+    padding: 12px;
+    /* internal spacing so content breathes */
+    border-radius: 8px;
+    /* subtle rounded corners */
+    border: 1px solid #e6e6e6;
+    /* light border so blocks are distinct */
+    text-align: center;
+}
+
+#building_network h2 {
+    margin: 8px 0;
+    color: #00274C;
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+#building_network p {
+    margin: 8px 0;
+    color: #00274C;
+    font-size: 1rem;
+    line-height: 1.4;
+    text-align: center;
+}
+
+
+/* Media Queries for larger screens.*/
+
+/*background for index page, resume page, networking page,and career exploration page will be a subtle gradient on larger screens whilst still maintaining accessibility standards and contrast ratios.*/
+@media (min-width: 768px) {
+    body {
+        background: #FFFFFF;
+        background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(255, 228, 125, 0.57) 72%, rgba(255, 203, 5, 1) 100%);
+    }
+
+    .index_block h2 {
+        margin-bottom: 16px;
+        color: #00274C;
+    }
+
+    .index_block p {
+        margin-bottom: 16px;
+        color: #00274C;
+    }
+
+    .index_block {
+        text-align: center;
+        margin: 10px auto;
+    }
+
+    #resume-resources ul {
+        text-align: center;
+        margin: 12px auto;
+        padding: 10px 20px;
+        border: #00274C 2px solid;
+        border-radius: 8px;
+    }
+
+    #resume-resources li {
+        font-size: 1.1rem;
+        margin: 10px 0;
+
+    }
+
+    #resume-resources li::marker {
+        color: #00274C;
+    }
+
+    /* style all the main block sections to be larger, responsive and centered on larger screens without using max-width. all text except nav and footer should be slightly larger and centered.*/
+    .block {
+        font-size: 1.1rem;
+        margin: 12px auto;
+        padding: 10px 20px;
+        text-align: center;
+    }
+
+    .block h2 {
+        font-size: 1.5rem;
+    }
+
+    .block p {
+        font-size: 1.1rem;
+    }
+
+    /* change resource types section to be a series of centered boxes with borders and padding in larger screens, with hover effects */
+    .resource-types {
+        font-size: 1.1rem;
+        margin: 12px auto;
+        padding: 10px 10px;
+        transition: background 0.3s ease;
+        background: #FFFBF0;
+    }
+
+    /*changed resource types to be a pale background with a hover effect that shows maize and navy colors*/
+
+    .resource-types ul {
+        text-align: center;
+        margin: 12px auto;
+        padding: 10px 10px;
+    }
+
+    .resource-types li {
+        font-size: 1.1rem;
+        margin: 10px 0;
+        padding: 8px 12px;
+        border: #f9f9f9 2px solid;
+        border-radius: 8px;
+    }
+
+    .resource-types li:hover {
+        background: #FFCB05;
+        color: #00274C;
+    }
+
+    /* style popular resources section to be larger, responsive and centered on larger screens without using max-width. all text except nav and footer should be slightly larger and centered.*/
+    .popular-resources {
+        font-size: 1.1rem;
+        margin: 12px auto;
+        padding: 10px 20px;
+        border: #00274C 2px solid;
+        border-radius: 8px;
+    }
+
+    .popular-resources h2 {
+        font-size: 1.4rem;
+    }
+
+    .popular-resources li {
+        font-size: 1.1rem;
+        margin: 10px 0;
+    }
+
+    .popular-resources li::marker {
+        color: #00274C;
+    }
+
+    .popular-resources li:hover {
+        background: #FFCB05;
+        color: #00274C;
+    }
+
+    /* style cdo_4_resources section to be larger, responsive and centered on larger screens without using max-width. all text except nav and footer should be slightly larger and centered.*/
+    .cdo_4_resources {
+        font-size: 1.1rem;
+        margin: 12px auto;
+        padding: 10px 20px;
+        border: #00274C 2px solid;
+        border-radius: 8px;
+    }
+    .cdo_4_resources li {
+        font-size: 1.1rem;
+        margin: 10px 0;
+    }
+    .cdo_4_resources li::marker {
+        color: #00274C;
+    }
+    .cdo_4_resources li:hover {
+        background: #FFCB05;
+        color: #00274C;
+    }
+    /* style the resume-resources section on desktop to be a series of centered boxes with borders and padding in larger screens, with hover effects */
+    #resume-resources li {
+        font-size: 1.1rem;
+        margin: 10px 0;
+        padding: 8px 12px;
+        border: #f9f9f9 2px solid;
+        border-radius: 8px;
+    }
+
+    #resume-resources li:hover {
+        background: #FFCB05;
+        color: #00274C;
+    }
+    #resume-resources li a {
+        font-size: 1.4rem;
+        font-weight: bold;
+        text-align: center;
+    }
+    /* style the 404.html page to make sure it maintains the same layout and design as on mobile. No gradient background or text color changes from mobile */
+    body.error-page {
+        background: #00274C;
+        color: #FFFFFF;
+    }
+
+}
